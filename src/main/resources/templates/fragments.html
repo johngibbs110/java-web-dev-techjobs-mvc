@@ -27,5 +27,18 @@
         </div>
     </div>
 
+    <table class="job-listing" th:fragment="generate-list">
+        <tr th:each="job : ${jobs}">
+            <td>
+                <p th:text="'ID: ' + ${job.getId()}"></p>
+                <p th:text="'Name: ' + ${job.getName()}"></p>
+                <p th:text="'Employer: ' + ${job.getEmployer()}"></p>
+                <p th:text="'Location: ' + ${job.getLocation()}"></p>
+                <p th:text="'Position Type: ' + ${job.getPositionType()}"></p>
+                <p th:text="'Skill: ' + ${job.getCoreCompetency()}"></p>
+            </td>
+        </tr>
+    </table>
+
 </body>
 </html>
